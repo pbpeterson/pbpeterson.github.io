@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  border-radius: 5%;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background: #111;
+  overflow-x: hidden;
+}
+
+.loading {
+  background: #111;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.svg-loading {
+  stroke-dasharray: 18;
+  animation: rotate 3.5s infinite;
+}
+
+text {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 7px;
+  animation: blink 0.9s infinite;
+}
+
+.hidden {
+  display: none;
+}
+
+.content {
+  animation: showContent 0.3s;
+}
+
+section {
+  height: 100vh;
+}
+
+header {
+  padding: 30px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link img {
+  width: 32px;
+  height: 32px;
+}
+
+.link img:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s;
+}
+
+.links {
+  display: flex;
+}
+
+.links li {
+  margin-right: 40px;
+}
+
+a svg {
+  height: 30px;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.texts {
+  color: white;
+  flex: 2;
+}
+
+.texts h1 {
+  margin-top: 40px;
+  font-size: 4rem;
+}
+.texts h2 {
+  font-weight: normal;
+  margin-top: 40px;
+  font-size: 2rem;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.main svg {
+  flex: 1;
+}
+
+.main svg path {
+  fill: none;
+  stroke: #fff;
+  stroke-dasharray: 40;
+  stroke-dashoffset: 40;
+  stroke-linecap: round;
+  animation: drawing 3s forwards normal;
+}
+
+.linkProject {
+  display: block;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.25rem;
+  line-height: 2.5rem;
+  transition: transform 0.3s;
+  max-width: 100%;
+}
+
+.linkProject:hover {
+  transform: scale(1.1);
+}
+
+.projects span {
+  font-size: 2rem;
+}
+
+.projectImg {
+  flex: 2;
+  margin-bottom: 20px;
+}
+
+.project .infos {
+  color: white;
+  margin-left: 30px;
+  flex: 1;
+}
+
+.project {
+  height: 100vh;
+  align-items: center;
+  display: flex;
+  opacity: 0;
+  transition: opacity 1.5s;
+}
+
+.project p {
+  margin-top: 20px;
+  font-weight: 300;
+}
+
+.project h3 {
+  margin: 20px 0px 10px 0;
+}
+
+.tools {
+  font-size: 0.9rem;
+  text-indent: 1.2rem;
+}
+
+.show {
+  opacity: 1;
+}
+
+.tools span {
+  font-size: 0.5rem;
+}
+
+.buttons {
+  display: flex;
+  margin-top: 20px;
+  text-indent: 1.2rem;
+}
+
+.buttons a {
+  font-weight: bold;
+  color: #111;
+  border-radius: 15px;
+  background: white;
+  cursor: pointer;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-indent: 0;
+  transition: transform 0.2s;
+}
+
+.btn + .btn {
+  margin-left: 10px;
+}
+
+.buttons a:hover {
+  transform: scale(1.1);
+}
+
+.buttons button + button {
+  margin-left: 15px;
+}
+
+@media (max-width: 40rem) {
+  .container {
+    max-width: 360px;
+  }
+
+  img {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .links li {
+    margin-right: 20px;
+  }
+
+  .texts h2 {
+    font-size: 1.5rem;
+  }
+
+  .infos p {
+    max-width: 300px;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  .project {
+    flex-direction: column;
+  }
+
+  .projectImg {
+    flex: 0;
+  }
+
+  body {
+    font-size: 87.5%;
+  }
+  .main svg {
+    display: none;
+  }
+}
+
+@keyframes drawing {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes rotate {
+  to {
+    stroke-dashoffset: 134;
+  }
+}
+
+@keyframes showContent {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
