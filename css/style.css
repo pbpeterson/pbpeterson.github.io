@@ -10,7 +10,7 @@ a {
 
 img {
   display: block;
-  max-width: 100%;
+  max-width: 80%;
   border-radius: 5%;
 }
 
@@ -21,9 +21,13 @@ ul {
 body {
   background: #111;
   overflow-x: hidden;
+  font-family: 'Raleway', sans-serif;
+  font-size: 400;
+  padding: 30px 0;
 }
 
 .loading {
+  font-family: 'Roboto Mono', monospace;
   background: #111;
   height: 100vh;
   display: flex;
@@ -87,7 +91,7 @@ a svg {
 }
 
 .container {
-  max-width: 960px;
+  max-width: 1260px;
   margin: 0 auto;
 }
 
@@ -150,6 +154,10 @@ a svg {
   margin-bottom: 20px;
 }
 
+.project:first-child {
+  margin-top: 80px;
+}
+
 .project .infos {
   color: white;
   margin-left: 30px;
@@ -157,7 +165,7 @@ a svg {
 }
 
 .project {
-  height: 100vh;
+  margin-bottom: 80px;
   align-items: center;
   display: flex;
   opacity: 0;
@@ -179,7 +187,7 @@ a svg {
 }
 
 .show {
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 .tools span {
@@ -219,13 +227,36 @@ a svg {
   margin-left: 15px;
 }
 
+.contact {
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 1s;
+  text-align: center;
+}
+
+.contact img {
+  width: 40px;
+  height: 40px;
+}
+
+.contact h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 30px;
+}
+
 @media (max-width: 40rem) {
   .container {
     max-width: 360px;
   }
 
   img {
-    max-width: 90%;
+    max-width: 70%;
     margin: 0 auto;
   }
 
@@ -233,8 +264,13 @@ a svg {
     margin-right: 20px;
   }
 
+  .texts h1 {
+    margin-top: 40px;
+    font-size: 3rem;
+  }
+
   .texts h2 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   .infos p {

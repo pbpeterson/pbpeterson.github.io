@@ -24,8 +24,8 @@ function scrollIntoSection() {
 }
 
 function slideAnimation() {
-  const projects = document.querySelectorAll('.project');
-  const triggerBottom = (window.innerHeight / 9) * 4;
+  const projects = document.querySelectorAll('.Pcontent');
+  const triggerBottom = (window.innerHeight / 7) * 4;
   projects.forEach((project) => {
     const projectTop = project.getBoundingClientRect().top;
 
