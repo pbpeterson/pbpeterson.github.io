@@ -1,5 +1,3 @@
-/* //add styles */
-
 html {
   scroll-behavior: smooth;
 }
@@ -275,6 +273,25 @@ footer a + a {
   footer {
     font-size: 2.2rem;
   }
+}
+
+.buttons {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.buttons a {
+  background: #fff;
+  color: black;
+  margin-right: 20px;
+  padding: 15px 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: transform 0.5s;
+}
+
+.buttons a:hover {
+  transform: scale(1.1);
 }
 
 @keyframes drawing {
