@@ -1,32 +1,24 @@
 const loading = document.querySelector('.loading');
 const content = document.querySelector('.content');
+const footer = document.querySelector('footer')
 
 setTimeout(() => {
   loading.classList.add('hidden');
   content.classList.remove('hidden');
 }, 3500);
 
-const svgDraw = document.querySelector('.main svg path');
-const svgLength = Math.floor(svgDraw.getTotalLength());
+let arrayAnime = []
+arrayAnime.push(footer)
 
-function scrollIntoSection() {
-  const buttonProjects = document.querySelector('.linkProject');
-
-  buttonProjects.addEventListener('click', (event) => {
-    event.preventDefault();
-    const href = event.currentTarget.getAttribute('href');
-    const firstProject = document.querySelector(href);
-    firstProject.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    });
-  });
-}
+const projects = document.querySelectorAll('.project');
+  projects.forEach((projeto)=>{
+    arrayAnime.push(projeto)
+  })
 
 function slideAnimation() {
-  const projects = document.querySelectorAll('.Pcontent');
-  const triggerBottom = (window.innerHeight / 7) * 4;
-  projects.forEach((project) => {
+  
+  const triggerBottom = (window.innerHeight / 7) * 6;
+  arrayAnime.forEach((project) => {
     const projectTop = project.getBoundingClientRect().top;
 
     if (projectTop < triggerBottom) {
@@ -38,4 +30,4 @@ function slideAnimation() {
 }
 
 window.addEventListener('scroll', slideAnimation);
-scrollIntoSection();
+

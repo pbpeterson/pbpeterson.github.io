@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,11 +10,12 @@
 
 a {
   text-decoration: none;
+  color: white;
 }
 
 img {
   display: block;
-  max-width: 80%;
+  max-width: 100%;
   border-radius: 5%;
 }
 
@@ -21,18 +26,17 @@ ul {
 body {
   background: #111;
   overflow-x: hidden;
-  font-family: 'Raleway', sans-serif;
-  font-size: 400;
-  padding: 30px 0;
+  font-family: "Raleway", sans-serif;
+  color: white;
 }
 
 .loading {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   background: #111;
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
 }
 
 .svg-loading {
@@ -41,7 +45,7 @@ body {
 }
 
 text {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   font-size: 7px;
   animation: blink 0.9s infinite;
 }
@@ -54,28 +58,37 @@ text {
   animation: showContent 0.3s;
 }
 
-section {
-  height: 100vh;
+.container {
+  max-width: 1260px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 header {
   padding: 30px 0;
-}
-
-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+nav ul {
+  display: flex;
+}
+
+nav ul li + li {
+  margin-left: 2.5rem;
+}
+
 .link img {
   width: 32px;
   height: 32px;
+  transition: transform 0.4s;
 }
 
 .link img:hover {
-  transform: scale(1.1);
-  transition: transform 0.2s;
+  transform: scale(1.2);
 }
 
 .links {
@@ -86,41 +99,37 @@ nav {
   margin-right: 40px;
 }
 
-a svg {
-  height: 30px;
+section {
+  margin-top: 3rem;
 }
 
-.container {
-  max-width: 1260px;
-  margin: 0 auto;
+section h2 {
+  max-width: 700px;
+  font-size: 3.5rem;
+
+  margin-bottom: 3rem;
 }
 
-.texts {
-  color: white;
-  flex: 2;
-}
-
-.texts h1 {
-  margin-top: 40px;
-  font-size: 4rem;
-}
-.texts h2 {
-  font-weight: normal;
-  margin-top: 40px;
+section p {
   font-size: 2rem;
 }
 
-.main {
+.intro {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 40px;
 }
 
-.main svg {
+.intro section {
+  flex: 1.5;
+}
+
+.intro svg {
+  align-self: flex-start;
+  justify-self: flex-end;
   flex: 1;
 }
 
-.main svg path {
+.intro svg path {
   fill: none;
   stroke: #fff;
   stroke-dasharray: 40;
@@ -129,171 +138,140 @@ a svg {
   animation: drawing 3s forwards normal;
 }
 
-.linkProject {
-  display: block;
+.projects {
+  margin-top: 3rem;
+}
+
+.projects h2 {
   cursor: pointer;
   text-align: center;
-  color: white;
+
   font-weight: bold;
-  font-size: 1.25rem;
-  line-height: 2.5rem;
+  font-size: 1.5rem;
   transition: transform 0.3s;
   max-width: 100%;
 }
 
-.linkProject:hover {
+.projects h2::after {
+  content: "↓";
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.projects h2:hover {
+  transform: translateY(30px);
   transform: scale(1.1);
-}
-
-.projects span {
-  font-size: 2rem;
-}
-
-.projectImg {
-  flex: 2;
-  margin-bottom: 20px;
-}
-
-.project:first-child {
-  margin-top: 80px;
-}
-
-.project .infos {
-  color: white;
-  margin-left: 30px;
-  flex: 1;
 }
 
 .project {
-  margin-bottom: 80px;
-  align-items: center;
-  display: flex;
+  padding: 0 20px;
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 2fr 1fr;
   opacity: 0;
-  transition: opacity 1.5s;
+  justify-content: center;
+  transition: opacity 1s;
+}
+
+#project1 {
+  padding-top: 40px;
 }
 
 .project p {
-  margin-top: 20px;
-  font-weight: 300;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .project h3 {
-  margin: 20px 0px 10px 0;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
-.tools {
-  font-size: 0.9rem;
-  text-indent: 1.2rem;
+.project ul {
+  margin-top: 1rem;
+  text-indent: 1rem;
+}
+
+.project + .project {
+  margin-top: 4rem;
+}
+
+footer {
+  opacity: 0;
+  margin-top: 6rem;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 4rem;
+  transition: opacity 1s;
+}
+
+footer div {
+  margin-top: 2rem;
+  display: flex;
+}
+
+.linkFooter img {
+  height: 45px;
+}
+
+.linkFooter {
+  transition: transform 0.4s;
+}
+
+.linkFooter:hover {
+  transform: scale(1.2);
+}
+
+footer a + a {
+  margin-left: 1.5rem;
 }
 
 .show {
-  opacity: 1 !important;
-}
-
-.tools span {
-  font-size: 0.5rem;
-}
-
-.buttons {
-  display: flex;
-  margin-top: 20px;
-  text-indent: 1.2rem;
-}
-
-.buttons a {
-  font-weight: bold;
-  color: #111;
-  border-radius: 15px;
-  background: white;
-  cursor: pointer;
-  padding: 20px 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  text-indent: 0;
-  transition: transform 0.2s;
-}
-
-.btn + .btn {
-  margin-left: 10px;
-}
-
-.buttons a:hover {
-  transform: scale(1.1);
-}
-
-.buttons button + button {
-  margin-left: 15px;
-}
-
-.contact {
-  display: flex;
-  flex-direction: column;
-  height: 60vh;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 1s;
-  text-align: center;
-}
-
-.contact img {
-  width: 40px;
-  height: 40px;
-}
-
-.contact h1 {
-  font-size: 4rem;
-  font-weight: bold;
-  color: white;
-  margin-bottom: 30px;
+  opacity: 1;
 }
 
 @media (max-width: 40rem) {
+  .project {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 50rem) {
+  .intro svg {
+    display: none;
+  }
+
+  .projects {
+    margin-top: 6rem;
+  }
+}
+
+@media (max-width: 30rem) {
   .container {
     max-width: 360px;
-  }
-
-  img {
-    max-width: 70%;
-    margin: 0 auto;
-  }
-
-  .links li {
-    margin-right: 20px;
-  }
-
-  .texts h1 {
-    margin-top: 40px;
-    font-size: 3rem;
-  }
-
-  .texts h2 {
-    font-size: 1.25rem;
-  }
-
-  .infos p {
-    max-width: 300px;
-  }
-
-  .buttons {
-    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .project {
-    flex-direction: column;
+    justify-items: center;
   }
 
-  .projectImg {
-    flex: 0;
+  .intro {
+    height: 60vh;
   }
 
-  body {
-    font-size: 87.5%;
+  .intro h2 {
+    font-size: 3rem;
   }
-  .main svg {
-    display: none;
+
+  footer {
+    font-size: 2.2rem;
   }
 }
 
