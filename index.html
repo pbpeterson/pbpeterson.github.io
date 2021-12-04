@@ -1,190 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto+Mono:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Peterson Pereira | Front-end developer</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto+Mono:wght@500&display=swap"
-    rel="stylesheet">
-  <link rel="shortcut icon" href="img/favicon.png" type="image/png">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Peterson Pereira | Front-end developer</title>
-</head>
-
-<body>
-  <div class="loading">
-    <svg class="svg-loading" width="200" height="200" viewBox="0 0 40 60">
-      <polygon class='triangle' fill="none" stroke="#fff" stroke-width="1" points="16,1 32,32 1,32" />
-      <text class='loading' x="0" y="45" fill="#fff">Loading...</text>
-    </svg>
-  </div>
-
-  <div class="content hidden">
-    <header class="container">
-      <a href="/">
-        <img src="img/Pb.svg" alt="Logo do site escrito as letras P e B">
-      </a>
-      <nav>
-        <ul>
-          <li>
-            <a href="https://github.com/pbpeterson" class="link">
-              <img src="img/github.svg" alt="Icone de Github"></a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/pbpeterson/" class="link">
-              <img src="img/linkedin.svg" alt="Icone do LinkedIn"></a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <div class="intro container">
-      <section>
-        <h2>Desenvolvedor <br>Front-end.</h2>
-        <p>Peterson Pereira | Web Developer</p>
-      </section>
-
-      <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M16 3.383l-.924-.383-7.297 17.617.924.383 7.297-17.617zm.287 3.617l6.153 4.825-6.173 5.175.678.737 7.055-5.912-7.048-5.578-.665.753zm-8.478 0l-6.249 4.825 6.003 5.175-.679.737-6.884-5.912 7.144-5.578.665.753z">
-        </path>
+  <body>
+    <div class="loading">
+      <svg class="svg-loading" width="200" height="200" viewBox="0 0 40 60">
+        <polygon
+          class="triangle"
+          fill="none"
+          stroke="#fff"
+          stroke-width="1"
+          points="16,1 32,32 1,32"
+        />
+        <text class="loading" x="0" y="45" fill="#fff">Loading...</text>
       </svg>
     </div>
 
-    <section class="container projects">
-      <h2><a href="#project1">Projetos</a></h2>
+    <div class="content hidden">
+      <header class="container">
+        <a href="/">
+          <img src="img/Pb.svg" alt="Logo do site escrito as letras P e B" />
+        </a>
+        <nav>
+          <ul>
+            <li>
+              <a href="https://github.com/pbpeterson" class="link">
+                <img src="img/github.svg" alt="Icone de Github"
+              /></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/pbpeterson/" class="link">
+                <img src="img/linkedin.svg" alt="Icone do LinkedIn"
+              /></a>
+            </li>
+          </ul>
+        </nav>
+      </header>
 
-      <div id="project1" class="project">
-        <img src="img/projects/ignews.png" alt="Foto do projeto Ignews.">
-        <div>
-          <article>
-            <h3>Ignews</h3>
-            <p>Este é um projeto de uma revista, possui sistema de login utilizando next-auth, e também possui um
-              sistema
-              de assinatura usando a API do Stripe. As informações de assinatura ficam salvas no FaunaDB.</p>
-            <h4>Ferramentas utilizadas:</h4>
-            <ul>
-              <li>● NextJS</li>
-              <li>● FaunaDB</li>
-              <li>● Strapi API</li>
-              <li>● SCSS</li>
-              <li>● Prismic CMS</li>
-            </ul>
-          </article>
-          <div class="buttons">
-            <a href="https://github.com/pbpeterson/ignews" target="_blank">View Code</a>
+      <div class="intro container">
+        <section>
+          <h2>Desenvolvedor <br />Front-end.</h2>
+          <p>Peterson Pereira | Web Developer</p>
+        </section>
+
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M16 3.383l-.924-.383-7.297 17.617.924.383 7.297-17.617zm.287 3.617l6.153 4.825-6.173 5.175.678.737 7.055-5.912-7.048-5.578-.665.753zm-8.478 0l-6.249 4.825 6.003 5.175-.679.737-6.884-5.912 7.144-5.578.665.753z"
+          ></path>
+        </svg>
+      </div>
+
+      <section class="container projects">
+        <h2><a href="#project1">Projetos</a></h2>
+
+        <div id="project1" class="project">
+          <img src="img/projects/ignews.png" alt="Foto do projeto Ignews." />
+          <div>
+            <article>
+              <h3>Ignews</h3>
+              <p>
+                Este é um projeto de uma revista, possui sistema de login
+                utilizando next-auth, e também possui um sistema de assinatura
+                usando a API do Stripe. As informações de assinatura ficam
+                salvas no FaunaDB.
+              </p>
+              <h4>Ferramentas utilizadas:</h4>
+              <ul>
+                <li>● NextJS</li>
+                <li>● FaunaDB</li>
+                <li>● Stripe API</li>
+                <li>● SCSS</li>
+                <li>● Prismic CMS</li>
+              </ul>
+            </article>
+            <div class="buttons">
+              <a href="https://github.com/pbpeterson/ignews" target="_blank"
+                >View Code</a
+              >
+            </div>
           </div>
         </div>
 
-      </div>
-
-      <div class="project">
-        <img src="img/projects/dashgo.png" alt="Foto do projeto dashgo.">
-        <div>
-          <article>
-            <h3>DashGo</h3>
-            <p>Este é o projeto de um dashboard criado utilizando ChakraUI.</p>
-            <h4>Ferramentas utilizadas:</h4>
-            <ul>
-              <li>● NextJS</li>
-              <li>● SCSS</li>
-              <li>● ChakraUI</li>
-            </ul>
-          </article>
-          <div class="buttons">
-            <a href="https://github.com/pbpeterson/dashgo" target="_blank">View Code</a>
+        <div class="project">
+          <img src="img/projects/dashgo.png" alt="Foto do projeto dashgo." />
+          <div>
+            <article>
+              <h3>DashGo</h3>
+              <p>
+                Este é o projeto de um dashboard criado utilizando ChakraUI.
+              </p>
+              <h4>Ferramentas utilizadas:</h4>
+              <ul>
+                <li>● NextJS</li>
+                <li>● SCSS</li>
+                <li>● ChakraUI</li>
+              </ul>
+            </article>
+            <div class="buttons">
+              <a href="https://github.com/pbpeterson/dashgo" target="_blank"
+                >View Code</a
+              >
+            </div>
           </div>
         </div>
 
-      </div>
-
-      <div class="project">
-        <img src="img/projects/dtmoney.png" alt="Foto do projeto dtmoney.">
-        <div>
-          <article>
-            <h3>Dt money</h3>
-            <p>Este é um projeto que funciona como uma calculadora de finanças</p>
-            <h4>Ferramentas utilizadas:</h4>
-            <ul>
-              <li>● NextJS</li>
-              <li>● SCSS</li>
-              <li>● MirageJS (Fake Back-end)</li>
-            </ul>
-          </article>
-          <div class="buttons">
-            <a href="https://github.com/pbpeterson/dt-money" target="_blank">View Code</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project">
-        <img src="img/projects/covid19data.png" alt="Foto do projeto covid19Data.">
-
-        <div>
-          <article>
-            <h3>Covid 19 data</h3>
-            <p>Este é um projeto criado para auxiliar nos dados da pandemia de COVID-19. Utiliza consumo de API Rest
-              para
-              informar o dado de acordo com o país digitado.
-            </p>
-            <h4>Ferramentas utilizadas:</h4>
-            <ul>
-              <li>● HTML5</li>
-              <li>● CSS3</li>
-              <li>● Javascript ES6+</li>
-            </ul>
-          </article>
-          <div class="buttons">
-            <a href="https://covid19pbpeterson.netlify.app/" target="_blank">Live Preview</a>
-            <a href="https://github.com/pbpeterson/covid19data" target="_blank">View Code</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project">
-        <img src="img/projects/todoApp.png" alt="Foto do projeto todoApp.">
-        <div>
-          <article>
-            <h3>Todo App</h3>
-            <p>Este é um projeto de uma TodoApp. O usuário pode digitar tarefas a fazer e também exclui-lás. O projeto
-              usa
-              o LocalStorage do navegador para armazenar os dados digitados.
-            </p>
-            <h4>Ferramentas utilizadas:</h4>
-            <ul>
-              <li>● HTML5</li>
-              <li>● CSS3</li>
-              <li>● Javascript ES6+</li>
-            </ul>
-          </article>
-          <div class="buttons">
-            <a href="https://todopbpeterson.netlify.app/" target="_blank">Live Preview</a>
-            <a href="https://github.com/pbpeterson/Small-projects/tree/main/todoApp" target="_blank">View Code</a>
+        <div class="project">
+          <img src="img/projects/dtmoney.png" alt="Foto do projeto dtmoney." />
+          <div>
+            <article>
+              <h3>Dt money</h3>
+              <p>
+                Este é um projeto que funciona como uma calculadora de finanças
+              </p>
+              <h4>Ferramentas utilizadas:</h4>
+              <ul>
+                <li>● NextJS</li>
+                <li>● SCSS</li>
+                <li>● MirageJS (Fake Back-end)</li>
+              </ul>
+            </article>
+            <div class="buttons">
+              <a href="https://github.com/pbpeterson/dt-money" target="_blank"
+                >View Code</a
+              >
+            </div>
           </div>
         </div>
 
+        <div class="project">
+          <img
+            src="img/projects/covid19data.png"
+            alt="Foto do projeto covid19Data."
+          />
 
-      </div>
+          <div>
+            <article>
+              <h3>Covid 19 data</h3>
+              <p>
+                Este é um projeto criado para auxiliar nos dados da pandemia de
+                COVID-19. Utiliza consumo de API Rest para informar o dado de
+                acordo com o país digitado.
+              </p>
+              <h4>Ferramentas utilizadas:</h4>
+              <ul>
+                <li>● HTML5</li>
+                <li>● CSS3</li>
+                <li>● Javascript ES6+</li>
+              </ul>
+            </article>
+            <div class="buttons">
+              <a href="https://covid19pbpeterson.netlify.app/" target="_blank"
+                >Live Preview</a
+              >
+              <a
+                href="https://github.com/pbpeterson/covid19data"
+                target="_blank"
+                >View Code</a
+              >
+            </div>
+          </div>
+        </div>
 
-    </section>
+        <div class="project">
+          <img src="img/projects/todoApp.png" alt="Foto do projeto todoApp." />
+          <div>
+            <article>
+              <h3>Todo App</h3>
+              <p>
+                Este é um projeto de uma TodoApp. O usuário pode digitar tarefas
+                a fazer e também exclui-lás. O projeto usa o LocalStorage do
+                navegador para armazenar os dados digitados.
+              </p>
+              <h4>Ferramentas utilizadas:</h4>
+              <ul>
+                <li>● HTML5</li>
+                <li>● CSS3</li>
+                <li>● Javascript ES6+</li>
+              </ul>
+            </article>
+            <div class="buttons">
+              <a href="https://todopbpeterson.netlify.app/" target="_blank"
+                >Live Preview</a
+              >
+              <a
+                href="https://github.com/pbpeterson/Small-projects/tree/main/todoApp"
+                target="_blank"
+                >View Code</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <footer class="container">
-      <p>Conecte-se comigo</p>
-      <div>
-        <a href="https://github.com/pbpeterson" class="linkFooter" target="_blank">
-          <img src="img/github.svg" alt="Icone de Github"></a>
-        <a href="https://www.linkedin.com/in/pbpeterson/" class="linkFooter" target="_blank">
-          <img src="img/linkedin.svg" alt="Icone do LinkedIn"></a>
-      </div>
-    </footer>
-  </div>
+      <footer class="container">
+        <p>Conecte-se comigo</p>
+        <div>
+          <a
+            href="https://github.com/pbpeterson"
+            class="linkFooter"
+            target="_blank"
+          >
+            <img src="img/github.svg" alt="Icone de Github"
+          /></a>
+          <a
+            href="https://www.linkedin.com/in/pbpeterson/"
+            class="linkFooter"
+            target="_blank"
+          >
+            <img src="img/linkedin.svg" alt="Icone do LinkedIn"
+          /></a>
+        </div>
+      </footer>
+    </div>
 
-
-
-  <script src="js/script.js"></script>
-</body>
-
+    <script src="js/script.js"></script>
+  </body>
 </html>
