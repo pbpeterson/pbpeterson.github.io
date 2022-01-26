@@ -16,7 +16,6 @@ a {
 img {
   display: block;
   max-width: 100%;
-  border-radius: 10px;
 }
 
 ul {
@@ -140,6 +139,10 @@ section p {
 
 .projects {
   margin-top: 3rem;
+}
+
+.projects img {
+  border-radius: 10px;
 }
 
 .projects h2 {
