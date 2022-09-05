@@ -11,12 +11,12 @@ let arrayAnime = []
 arrayAnime.push(footer)
 
 const projects = document.querySelectorAll('.project');
-  projects.forEach((projeto)=>{
-    arrayAnime.push(projeto)
-  })
+projects.forEach((projeto) => {
+  arrayAnime.push(projeto)
+})
 
 function slideAnimation() {
-  
+
   const triggerBottom = (window.innerHeight / 7) * 6;
   arrayAnime.forEach((project) => {
     const projectTop = project.getBoundingClientRect().top;
